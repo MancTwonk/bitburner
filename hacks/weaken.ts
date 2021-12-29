@@ -12,7 +12,7 @@ export default async function main(ns: NS) {
     ns.exit();
   }
 
-  if (delay && delay > 0) {
+  if (delay) {
     await ns.sleep(Number(delay));
   }
 

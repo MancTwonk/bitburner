@@ -7,7 +7,7 @@ export default async function main(ns: NS) {
   const delay = Number(ns.args[2]) || 0;
   const messWithStocks = Boolean(ns.args[3]) || false;
 
-  if (delay && delay > 0) {
+  if (delay) {
     await ns.sleep(delay);
   }
 
