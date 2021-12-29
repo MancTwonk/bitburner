@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * @public
  */
- interface Player {
+interface Player {
   hacking: number;
   hp: number;
   max_hp: number;
@@ -712,13 +713,13 @@ export interface GangOtherInfoObject {
  * @public
  */
 export interface GangOtherInfo {
-  "Slum Snakes": GangOtherInfoObject;
+  'Slum Snakes': GangOtherInfoObject;
   Tetrads: GangOtherInfoObject;
-  "The Syndicate": GangOtherInfoObject;
-  "The Dark Army": GangOtherInfoObject;
-  "Speakers for the Dead": GangOtherInfoObject;
+  'The Syndicate': GangOtherInfoObject;
+  'The Dark Army': GangOtherInfoObject;
+  'Speakers for the Dead': GangOtherInfoObject;
   NiteSec: GangOtherInfoObject;
-  "The Black Hand": GangOtherInfoObject;
+  'The Black Hand': GangOtherInfoObject;
 }
 
 /**
@@ -845,17 +846,17 @@ export interface GangMemberInfo {
 export interface GangMemberAscension {
   /** Amount of respect lost from ascending */
   respect: number;
-  /** Hacking multiplier gained from ascending.*/
+  /** Hacking multiplier gained from ascending. */
   hack: number;
-  /** Strength multiplier gained from ascending.*/
+  /** Strength multiplier gained from ascending. */
   str: number;
-  /** Defense multiplier gained from ascending.*/
+  /** Defense multiplier gained from ascending. */
   def: number;
-  /** Dexterity multiplier gained from ascending.*/
+  /** Dexterity multiplier gained from ascending. */
   dex: number;
-  /** Agility multiplier gained from ascending.*/
+  /** Agility multiplier gained from ascending. */
   agi: number;
-  /** Charisma multiplier gained from ascending.*/
+  /** Charisma multiplier gained from ascending. */
   cha: number;
 }
 
@@ -3867,6 +3868,7 @@ export interface NS extends Singularity {
    * Namespace for hacknet functions.
    * @remarks RAM cost: 4 GB
    */
+  // eslint-disable-next-line prettier/prettier
   readonly hacknet: Hacknet;
   /**
    *
@@ -5288,7 +5290,7 @@ export interface NS extends Singularity {
    * @param data - Data to write.
    * @param mode - Defines the write mode. Only valid when writing to text files.
    */
-  write(handle: string, data?: string[] | number, mode?: "w" | "a"): Promise<void>;
+  write(handle: string, data?: string[] | number, mode?: 'w' | 'a'): Promise<void>;
 
   /**
    * Attempt to write to a port.
@@ -6231,7 +6233,7 @@ interface EmployeeJobs {
   Engineer: number;
   Business: number;
   Management: number;
-  "Research & Development": number;
+  'Research & Development': number;
   Training: number;
   Unassigned: number;
 }

@@ -1,7 +1,7 @@
-import { NS } from '../index';
+import { NS } from '../types/bitburner/index';
 
 /** @param {NS} ns */
-export default async function main(ns: NS) {
+export async function main(ns: NS) {
   const target = ns.args[0].toString() || null;
   const threads = Number(ns.args[1]) || 1;
   const delay = Number(ns.args[2]) || 0;
