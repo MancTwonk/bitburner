@@ -7,10 +7,7 @@ export default async function main(ns: NS) {
   const delay = Number(ns.args[2]) || 0;
   const messWithStocks = Boolean(ns.args[3]) || false;
 
-  if (delay) {
-    await ns.sleep(delay);
-  }
-
+  await ns.sleep(delay);
   ns.print(`Growing ${target} using ${threads} threads`);
   await ns.grow(target, { threads, stock: messWithStocks });
   ns.exit();

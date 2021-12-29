@@ -12,10 +12,7 @@ export default async function main(ns: NS) {
     ns.exit();
   }
 
-  if (delay) {
-    await ns.sleep(Number(delay));
-  }
-
+  await ns.sleep(delay);
   ns.print(`Weakening ${target} using ${threads} threads`);
   await ns.weaken(target, { threads, stock: messWithStocks });
   ns.exit();
